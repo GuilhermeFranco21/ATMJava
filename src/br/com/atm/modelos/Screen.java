@@ -1,5 +1,5 @@
-// Screen.java
-// Representa a tela do ATM
+package br.com.atm.modelos;// br.com.atm.modelos.Screen.java
+// Representa a tela do br.com.atm.modelos.ATM
 
 public class Screen {
 
@@ -21,4 +21,4 @@ public class Screen {
 
         System.out.printf( "$%,.2f", amount);
     }// fim do método displayDollarAmount
-}// fim da classe Screen
+}// fim da classe br.com.atm.modelos.Screen

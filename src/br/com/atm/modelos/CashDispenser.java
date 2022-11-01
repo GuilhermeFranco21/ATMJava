@@ -1,5 +1,7 @@
-// CashDispenser.java
-// Representa o dispensador de cédulas do ATM
+package br.com.atm.modelos;
+
+// br.com.atm.modelos.CashDispenser.java
+// Representa o dispensador de cédulas do br.com.atm.modelos.ATM
 public class CashDispenser {
 
     // o número inicial padrão de cédulas no dispensador de cédulas
@@ -9,7 +11,7 @@ public class CashDispenser {
     public  CashDispenser(){
 
         count = INITIAL_COUNT; // configura atributo count como o padrão
-    } // fim do construtor CashDispenser
+    } // fim do construtor br.com.atm.modelos.CashDispenser
 
     // simula a entrega da quantia especificada de cédulas
     public void dispenseCash( int amount ){
@@ -31,4 +33,4 @@ public class CashDispenser {
         }
     }// fim do método isSufficientCashAvailable
 
-}// fim da classe CashDispenser
+}// fim da classe br.com.atm.modelos.CashDispenser

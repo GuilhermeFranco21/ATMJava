@@ -1,19 +1,19 @@
-// Transaction.java
-// A superclasse abstrata Transaction representa uma transação no ATM
+package br.com.atm.modelos;// br.com.atm.modelos.Transaction.java
+// A superclasse abstrata br.com.atm.modelos.Transaction representa uma transação no br.com.atm.modelos.ATM
 
 public abstract class Transaction {
 
     private int accountNumber; // indica conta envolvida
-    private Screen screen; // Tela do ATM
+    private Screen screen; // Tela do br.com.atm.modelos.ATM
     private BankDatabase bankDatabase; // banco de dados de informações sobre a conta
 
-    // Construtor de Transaction invocado pelas subclasses utilizando super()
+    // Construtor de br.com.atm.modelos.Transaction invocado pelas subclasses utilizando super()
     public Transaction( int userAccountNumber, Screen atmScreen, BankDatabase atmBankDatabase ){
 
         accountNumber = userAccountNumber;
         screen = atmScreen;
         bankDatabase = atmBankDatabase;
-    }// fim do contrutor de Transaction
+    }// fim do contrutor de br.com.atm.modelos.Transaction
 
     // retorna o número de conta
     public int getAccountNumber(){
@@ -35,4 +35,4 @@ public abstract class Transaction {
 
     // realiza a transação (sobrescrita por cada subclasse)
     abstract public void execute();
-}// fim da classe Transaction
+}// fim da classe br.com.atm.modelos.Transaction

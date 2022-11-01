@@ -1,5 +1,5 @@
-// BalanceInquiry.java
-// Representa uma transação de consulta de saldos do ATM
+package br.com.atm.modelos;// br.com.atm.modelos.BalanceInquiry.java
+// Representa uma transação de consulta de saldos do br.com.atm.modelos.ATM
 
 public class BalanceInquiry extends Transaction {
 
@@ -29,5 +29,5 @@ public class BalanceInquiry extends Transaction {
         screen.displayDollarAmout( totalBalance );
         screen.displayMessageLine( "" );
     }// fim do método execute
-}// fim da classe BalanceInquiry
+}// fim da classe br.com.atm.modelos.BalanceInquiry
 

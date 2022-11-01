@@ -1,11 +1,13 @@
-// Withdrawal.java
-// A classe Withdrawal representa uma transação de saque no ATM
+package br.com.atm.modelos;
+
+// br.com.atm.modelos.Withdrawal.java
+// A classe br.com.atm.modelos.Withdrawal representa uma transação de saque no br.com.atm.modelos.ATM
 public class Withdrawal extends Transaction{
 
     // atributos
     private int amount; // quantia a sacar
-    private Keypad keypad; // teclado do ATM
-    private CashDispenser cashDispenser; // dispensador de cédulas do ATM
+    private Keypad keypad; // teclado do br.com.atm.modelos.ATM
+    private CashDispenser cashDispenser; // dispensador de cédulas do br.com.atm.modelos.ATM
 
     // constante que corresponde a opção cancelar no menu
     private final static int CANCELED = 6;
@@ -61,7 +63,7 @@ public class Withdrawal extends Transaction{
                     // o dispensador de cédulas não tem cédulas suficientes
                     else {
                         screen.displayMessageLine(
-                                "\nInsufficient cash available in the ATM." +
+                                "\nInsufficient cash available in the br.com.atm.modelos.ATM." +
                                 "\n\nPlease choose a smaller amount.");
                     }
                 }// fim do if
@@ -100,13 +102,13 @@ public class Withdrawal extends Transaction{
         while ( userChoice == 0 ){
 
             // exibe o menu
-            screen.displayMessageLine( "\nWithdrawal Menu:" );
+            screen.displayMessageLine( "\nbr.com.atm.modelos.Withdrawal Menu:" );
             screen.displayMessageLine( "1 - $20" );
             screen.displayMessageLine( "2 - $40" );
             screen.displayMessageLine( "3 - $60" );
             screen.displayMessageLine( "4 - $100" );
             screen.displayMessageLine( "5 - $200" );
-            screen.displayMessageLine( "6 - Cancel Transaction" );
+            screen.displayMessageLine( "6 - Cancel br.com.atm.modelos.Transaction" );
             screen.displayMessage( "\nChoose a withdrawl amount: " );
 
             int input = keypad.getInput(); // obtém a entrada de usuário pelo teclado
@@ -134,4 +136,4 @@ public class Withdrawal extends Transaction{
         return userChoice; // retorna a quantia de saque ou CANCELADA
     }// fim do método displayMenuOfAmounts
 
-}// fim da classe Withdrawal
+}// fim da classe br.com.atm.modelos.Withdrawal

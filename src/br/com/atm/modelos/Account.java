@@ -1,4 +1,4 @@
-// Account.java
+package br.com.atm.modelos;// br.com.atm.modelos.Account.java
 // Representa uma conta bancária
 
 public class Account {
@@ -8,16 +8,16 @@ public class Account {
     private double availableBalance; // fundos disponíveis para saque
     private double totalBalance; // fundos disponíveis + depósitos pendentes
 
-    // O construtor Account inicializa os atributos
+    // O construtor br.com.atm.modelos.Account inicializa os atributos
     public Account( int theAccountNumber, int thePIN, double theAvailableBalance, double theTotalBalance ){
 
         accountNumber = theAccountNumber;
         pin = thePIN;
         availableBalance = theAvailableBalance;
         totalBalance = theTotalBalance;
-    }// fim do construtor Account
+    }// fim do construtor br.com.atm.modelos.Account
 
-    // determina se um PIN especificado pelo usuário corresponde ao PIN em Account
+    // determina se um PIN especificado pelo usuário corresponde ao PIN em br.com.atm.modelos.Account
     public boolean validadePIN( int userPIN ){
 
         if ( userPIN == pin ){
@@ -58,4 +58,4 @@ public class Account {
 
         return accountNumber;
     }// fim do método getAccountNumber
-}// fim da classe Account
+}// fim da classe br.com.atm.modelos.Account

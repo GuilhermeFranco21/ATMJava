@@ -1,5 +1,5 @@
-// Deposit.java
-// Representa uma transação de depósito no ATM
+package br.com.atm.modelos;// br.com.atm.modelos.Deposit.java
+// Representa uma transação de depósito no br.com.atm.modelos.ATM
 
 public class Deposit extends Transaction {
 
@@ -8,7 +8,7 @@ public class Deposit extends Transaction {
     private DepositSlot depositSlot; // referência à abertura para depósito
     private final static int CANCELED = 0; // constante para a opção de cancelamento
 
-    // Construtor de Deposit
+    // Construtor de br.com.atm.modelos.Deposit
     public Deposit( int userAccountNumber, Screen atmScreen, BankDatabase atmBankDatabase, Keypad atmKeypad,
                     DepositSlot atmDepositSlot ){
 
@@ -18,7 +18,7 @@ public class Deposit extends Transaction {
         // inicializa as referências a teclado e abertura para depósito
         keypad = atmKeypad;
         depositSlot = atmDepositSlot;
-    }// fim do construtor de Deposit
+    }// fim do construtor de br.com.atm.modelos.Deposit
 
     // realiza a transação
 
@@ -81,4 +81,4 @@ public class Deposit extends Transaction {
             return ( double ) input / 100; // retorna a quantia em dólares
         }// fim do else
     }// fim do método promptForDepositAmount
-}// fim da classe Deposit
+}// fim da classe br.com.atm.modelos.Deposit

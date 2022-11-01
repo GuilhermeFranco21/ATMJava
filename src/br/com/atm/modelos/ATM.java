@@ -1,16 +1,14 @@
-// ATM.Java
+package br.com.atm.modelos;// br.com.atm.modelos.ATM.Java
 // Representa um caixa eletrônico
-
-import javax.swing.*;
 
 public class ATM {
 
     private boolean userAuthenticated; // se usuário foi autenticado
     private int currentAccountNumber; // número atual da conta de usuário
-    private Screen screen; // tela do ATM
-    private Keypad keypad; // teclado do ATM
-    private CashDispenser cashDispenser; // dispensador de cédulas do ATM
-    private DepositSlot depositSlot; // abertura para depósito do ATM
+    private Screen screen; // tela do br.com.atm.modelos.ATM
+    private Keypad keypad; // teclado do br.com.atm.modelos.ATM
+    private CashDispenser cashDispenser; // dispensador de cédulas do br.com.atm.modelos.ATM
+    private DepositSlot depositSlot; // abertura para depósito do br.com.atm.modelos.ATM
     private BankDatabase bankDatabase; // banco de dados com as informações sobre as contas
 
     // constantes que correspondem às principais opções do menu
@@ -19,7 +17,7 @@ public class ATM {
     private static final int DEPOSIT = 3;
     private static final int EXIT = 4;
 
-    // construtor sem argumentos de ATM inicializa as variáveis de instância
+    // construtor sem argumentos de br.com.atm.modelos.ATM inicializa as variáveis de instância
     public ATM(){
 
         userAuthenticated = false; // usuário não foi autenticado para iniciar
@@ -29,9 +27,9 @@ public class ATM {
         cashDispenser = new CashDispenser(); // cria dispensador de cédulas
         depositSlot = new DepositSlot(); // cria a abertura para depósito
         bankDatabase = new BankDatabase(); // cria o banco de dados com informações sobre as contas
-    } // fim do construtor ATM sem argumentos
+    } // fim do construtor br.com.atm.modelos.ATM sem argumentos
 
-    // inicia o ATM
+    // inicia o br.com.atm.modelos.ATM
     public void run(){
 
         // dá boas-vindas e autentica o usuário; realiza transações
@@ -45,8 +43,8 @@ public class ATM {
             } // fim do while
 
             performTransactions(); // o usuário agora está autenticado
-            userAuthenticated = false; // reinicializa antes da próxima sessão do ATM
-            currentAccountNumber = 0; // reinicializa antes da próxima sessão do ATM
+            userAuthenticated = false; // reinicializa antes da próxima sessão do br.com.atm.modelos.ATM
+            currentAccountNumber = 0; // reinicializa antes da próxima sessão do br.com.atm.modelos.ATM
             screen.displayMessageLine( "\nThank you! Goodbye!" );
         }// fim do while
     }// fim do método run
@@ -99,7 +97,7 @@ public class ATM {
                     break;
                 case EXIT: // usuário optou por terminar a sessão
                     screen.displayMessageLine( "\nExiting the system..." );
-                    userExited = true; // essa sessão de ATM deve terminar
+                    userExited = true; // essa sessão de br.com.atm.modelos.ATM deve terminar
                     break;
                 default: // usuário não inseriu um inteiro de 1 a 4
                     screen.displayMessageLine( "\nYou did not enter a valid selection. Try again" );
@@ -114,34 +112,34 @@ public class ATM {
         screen.displayMessageLine( "\nMain menu:" );
         screen.displayMessageLine( "1 - View my balance" );
         screen.displayMessageLine( "2 - Withdraw cash " );
-        screen.displayMessageLine( "3 - Deposit funds " );
+        screen.displayMessageLine( "3 - br.com.atm.modelos.Deposit funds " );
         screen.displayMessageLine( "4 - Exit\n" );
         screen.displayMessageLine( "Enter a choice" );
         return keypad.getInput(); // retorna a seleção do usuário
     }// fim do método displayMainMenu
 
-    // retorna o objeto da subclasse de Transaction especificada
+    // retorna o objeto da subclasse de br.com.atm.modelos.Transaction especificada
     private  Transaction createTransaction( int type ){
 
-        Transaction temp = null; // variável Transaction temporária
+        Transaction temp = null; // variável br.com.atm.modelos.Transaction temporária
 
-        // determina qual tipo de Transaction criar
+        // determina qual tipo de br.com.atm.modelos.Transaction criar
         switch ( type ) {
 
-            case BALANCE_INQUIRY: // cria uma nova transação BalanceInquiry
+            case BALANCE_INQUIRY: // cria uma nova transação br.com.atm.modelos.BalanceInquiry
                 temp = new BalanceInquiry( currentAccountNumber, screen, bankDatabase );
                 break;
-            case WITHDRAWAL: // cria uma nova transação BalanceInquiry
+            case WITHDRAWAL: // cria uma nova transação br.com.atm.modelos.BalanceInquiry
                 temp = new Withdrawal( currentAccountNumber, screen, bankDatabase, keypad, cashDispenser );
                 break;
-            case DEPOSIT: // cria uma nova transação Deposit
+            case DEPOSIT: // cria uma nova transação br.com.atm.modelos.Deposit
                 temp = new Deposit( currentAccountNumber, screen, bankDatabase, keypad, depositSlot );
                 break;
         }// fim do switch
 
         return temp; // retorna o objeto recém-criado
     }// fim do método createTransaction
-}// fim da classe ATM
+}// fim da classe br.com.atm.modelos.ATM
 
 
 

@@ -1,5 +1,5 @@
-// DepositSlot.java
-// Representa a abertura para depósito do ATM
+package br.com.atm.modelos;// br.com.atm.modelos.DepositSlot.java
+// Representa a abertura para depósito do br.com.atm.modelos.ATM
 
 public class DepositSlot {
 
@@ -9,4 +9,4 @@ public class DepositSlot {
 
         return true; // o envelope de depósito foi recebido
     }// fim do método isEnvelopeReceived
-}// fim da classe DepositSlot
+}// fim da classe br.com.atm.modelos.DepositSlot
