@@ -104,9 +104,9 @@ public class Withdrawal extends Transaction{
             screen.displayMessageLine( "1 - $20" );
             screen.displayMessageLine( "2 - $40" );
             screen.displayMessageLine( "3 - $60" );
-            screen.displayMessageLine( "4 - $80" );
-            screen.displayMessageLine( "5 - $100" );
-            screen.displayMessageLine( "6 - $200" );
+            screen.displayMessageLine( "4 - $100" );
+            screen.displayMessageLine( "5 - $200" );
+            screen.displayMessageLine( "6 - Cancel Transaction" );
             screen.displayMessage( "\nChoose a withdrawl amount: " );
 
             int input = keypad.getInput(); // obtém a entrada de usuário pelo teclado
